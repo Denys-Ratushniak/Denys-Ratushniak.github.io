@@ -1,0 +1,75 @@
+@mixin header-styles {
+  background-color: $primary-color;
+  display: flex;
+  align-items: center;
+  font-size: 130%;
+  position: fixed;
+  width: 100%;
+  height: 7vh;
+}
+
+@mixin logo-container-styles {
+  display: flex;
+  justify-content: left;
+  color: $secondary-color;
+  align-items: center;
+  margin-left: 3%;
+  width: 50%;
+  &:hover {
+    color: $hover-button-color;
+  }
+
+  .logo-img {
+    display: flex;
+    height: 35px;
+    padding-right: 3%;
+    cursor: pointer;
+  }
+
+  .logo-font {
+    > a {
+      text-decoration: none;
+      color: $secondary-color;
+      &:hover {
+        color: $hover-button-color;
+      }
+    }
+  }
+}
+
+@mixin nav-links-styles {
+  width: 100%;
+  margin-right: 3%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: right;
+  gap: 4%;
+  > li > a {
+    text-decoration: none;
+    color: $secondary-color;
+    &:hover {
+      color: $hover-button-color;
+    }
+  }
+}
+
+@mixin nav-bar-styles {
+  display: flex;
+  margin-right: 3%;
+  width: 100%;
+  justify-content: right;
+}
+
+@mixin footer-styles {
+  height: 5vh;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: $hover-button-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 80%;
+  color: $secondary-color;
+}
