@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create User - Class Booking Service</title>
     <link rel="stylesheet" href="../css/create-user.css" />
+    <script src="../js/create-user.js"></script>
   </head>
   <body>
     <header class="header">
@@ -35,17 +36,17 @@
       <section class="create-user-section">
         <div class="user-creation-dialog">
           <p class="create-user-general">Create User</p>
-          <form class="create-user-form">
+          <form class="create-user-form" id="create-user-form">
             <label for="username" class="input-label">Username *</label>
             <input
               type="text"
               id="username"
               name="username"
               required
-              minlength="3"
+              minlength="5"
               maxlength="20"
-              pattern="[A-Za-z0-9]+"
-              title="Username must be between 3 and 20 characters and contain only letters and numbers."
+              pattern="[a-zA-Z][a-zA-Z\d\.-_]{4,120}$"
+              title="Username must be between 5 and 20 characters and contain only letters and numbers."
               class="input-field"
             />
 
@@ -55,10 +56,10 @@
               id="firstName"
               name="firstName"
               required
-              minlength="3"
+              minlength="2"
               maxlength="20"
               pattern="[A-Za-z]+"
-              title="firstName must be between 3 and 20 characters and contain only letters."
+              title="firstName must be between 2 and 20 characters and contain only letters."
               class="input-field"
             />
 
@@ -68,10 +69,10 @@
               id="lastName"
               name="lastName"
               required
-              minlength="3"
+              minlength="2"
               maxlength="20"
               pattern="[A-Za-z]+"
-              title="lastName must be between 3 and 20 characters and contain only letters."
+              title="lastName must be between 2 and 20 characters and contain only letters."
               class="input-field"
             />
 
@@ -97,7 +98,7 @@
               class="input-field"
             />
 
-            <label for="confirmPassword" class="input-label" class="input-field"
+            <label for="confirmPassword" class="input-label"
               >Confirm Password *</label
             >
             <input
@@ -115,7 +116,7 @@
               type="tel"
               id="phone"
               name="phone"
-              pattern="^[0-9]{10}$"
+              pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[\s0-9]{4,20}$"
               class="input-field"
             />
 
@@ -126,11 +127,15 @@
               name="birthDate"
               class="input-field"
             />
-
-            <button type="submit" class="create-user-button">
-              Create User
-            </button>
           </form>
+
+          <button
+            type="submit"
+            class="create-user-button"
+            id="create-user-button"
+          >
+            Create User
+          </button>
         </div>
       </section>
     </main>
