@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify(data),
             };
-
+            console.log(response);
             const response = await fetch('http://127.0.0.1:5000/user', options);
+            
             const json = await response.json();
             if (json.code !== 200) {
                 if (json.error.slice(2, 11) === 'birthDate') {

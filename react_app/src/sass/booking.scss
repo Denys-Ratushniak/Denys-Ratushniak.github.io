@@ -1,0 +1,72 @@
+@import "colors.scss";
+
+.booking-container {
+  min-height: 95vh;
+  padding-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+  background-image: linear-gradient($hover-button-color, $primary-color);
+}
+
+.classroom-container {
+  padding-top: 2%;
+}
+
+.classroom {
+  background-color: $secondary-color;
+  padding: 0.5%;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px $shadow-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+
+  .classroom-info {
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2%;
+  }
+  .classroom-name {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .classroom-capacity {
+  }
+
+  .book-button {
+    background-color: $primary-color;
+    color: $secondary-color;
+    justify-content: right;
+    display: flex;
+    padding: 1% 4%;
+    border-radius: 10px;
+    border: none;
+    margin-right: 3%;
+
+    cursor: pointer;
+    &:hover {
+      background-color: $hover-button-color;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media screen and (min-width: 992px) {
+}

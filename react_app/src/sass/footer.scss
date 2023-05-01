@@ -1,0 +1,14 @@
+@import "colors.scss";
+
+.footer{
+    height: 5vh;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: $hover-button-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 80%;
+    color: $secondary-color;
+  }
