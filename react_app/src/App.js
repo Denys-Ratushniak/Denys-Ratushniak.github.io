@@ -10,10 +10,13 @@ import CreateUser from './components/CreateUser';
 import Login from './components/Login';
 import EditUser from './components/EditUser';
 import PrivateRoute from "./components/PrivateRoute";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (
         <div className="App">
+            <ToastContainer />
             <Header />
             <Routes>
                 <Route path='/home' element={<Home/>}> </Route>
