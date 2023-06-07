@@ -1,0 +1,92 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  @include header-styles;
+}
+.logo-container {
+  @include logo-container-styles;
+}
+
+.nav-links {
+  @include nav-links-styles;
+}
+
+.nav-bar {
+  @include nav-bar-styles;
+}
+
+@import "dropdown-menu.scss";
+
+.main {
+  height: 95vh;
+  padding-top: 7vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-section,
+.contactus-section {
+  height: 100vh;
+  background: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-page,
+.contactus-page {
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2%;
+  border: 3px solid $primary-color;
+  border-radius: 20px;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  color: $secondary-color;
+  box-sizing: border-box;
+}
+
+.footer {
+  @include footer-styles;
+}
+
+@media screen and (max-width: 576px) {
+  .logo-font {
+    font-size: 15px;
+  }
+  .welcome-page,
+  .contactus-page {
+    font-size: 100%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .welcome-page,
+  .contactus-page {
+    font-size: 100%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .welcome-page,
+  .contactus-page {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}

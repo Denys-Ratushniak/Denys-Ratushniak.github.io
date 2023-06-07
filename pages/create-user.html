@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User - Class Booking Service</title>
+    <link rel="stylesheet" href="../css/create-user.css" />
+    <script src="../js/create-user.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <img src="../images/logo-transparent.png" class="logo-img" />
+        <p class="logo-font">
+          <a href="../index.html"> Class Booking Service</a>
+        </p>
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="create-user.html">Create User</a></li>
+          <li><a href="login.html">Sign In</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+        <div class="dropdown-menu">
+          <img src="../images/drowdown-menu.png" class="dropdown-menu-img" />
+          <ul class="dropdown-menu-info">
+            <li><a href="create-user.html">Create User</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="create-user-section">
+        <div class="user-creation-dialog">
+          <p class="create-user-general">Create User</p>
+          <form class="create-user-form" id="create-user-form">
+            <label for="username" class="input-label">Username *</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="5"
+              maxlength="20"
+              pattern="[a-zA-Z][a-zA-Z\d\.-_]{4,120}$"
+              title="Username must be between 5 and 20 characters and contain only letters and numbers."
+              class="input-field"
+            />
+
+            <label for="firstName" class="input-label">First Name *</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              minlength="2"
+              maxlength="20"
+              pattern="[A-Za-z]+"
+              title="firstName must be between 2 and 20 characters and contain only letters."
+              class="input-field"
+            />
+
+            <label for="lastName" class="input-label">Last Name *</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              minlength="2"
+              maxlength="20"
+              pattern="[A-Za-z]+"
+              title="lastName must be between 2 and 20 characters and contain only letters."
+              class="input-field"
+            />
+
+            <label for="email" class="input-label">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address."
+              class="input-field"
+            />
+
+            <label for="password" class="input-label">Password *</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              title="password must contain at least 8 characters"
+              class="input-field"
+            />
+
+            <label for="confirmPassword" class="input-label"
+              >Confirm Password *</label
+            >
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              minlength="8"
+              title="confirm password must contain at least 8 characters"
+              class="input-field"
+            />
+
+            <label for="phone" class="input-label">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[\s0-9]{4,20}$"
+              class="input-field"
+            />
+
+            <label for="birthDate" class="input-label">Birth Date</label>
+            <input
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              class="input-field"
+            />
+          </form>
+
+          <button
+            type="submit"
+            class="create-user-button"
+            id="create-user-button"
+          >
+            Create User
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer-text">Class Booking Service &copy; 2023</p>
+      <p class="footer-message">All rights reserved.</p>
+    </footer>
+  </body>
+</html>

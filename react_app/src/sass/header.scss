@@ -1,0 +1,73 @@
+@import "colors.scss";
+
+
+.header {
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    font-size: 130%;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: left;
+    color: $secondary-color;
+    align-items: center;
+    margin-left: 3%;
+    width: 50%;
+    &:hover {
+        color: $hover-button-color;
+    }
+
+    .logo-img {
+        display: flex;
+        height: 35px;
+        padding-right: 3%;
+        cursor: pointer;
+    }
+
+    .logo-font {
+        > a {
+        text-decoration: none;
+        color: $secondary-color;
+        &:hover {
+            color: $hover-button-color;
+        }
+        }
+    }
+}
+
+.nav-links {
+    width: 100%;
+    margin-right: 3%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: right;
+    gap: 4%;
+    > li > a {
+        text-decoration: none;
+        color: $secondary-color;
+        &:hover {
+        color: $hover-button-color;
+        }
+    }
+}
+
+.nav-bar {
+    display: flex;
+    margin-right: 3%;
+    width: 100%;
+    justify-content: right;
+}
+
+@import "dropdown-menu.scss";
+
+@media screen and (max-width: 576px) {
+    .logo-font {
+        font-size: 15px;
+    }
+}

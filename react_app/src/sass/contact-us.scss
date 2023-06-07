@@ -1,0 +1,41 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+
+.contact-us-container {
+    height: 95vh;
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-section{
+    @include info-section-style;
+}
+
+.contact-us{
+    @include info-page-style;
+}
+
+@media screen and (max-width: 576px) {
+    .contact-us {
+        font-size: 100%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .contact-us {
+        font-size: 100%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-us {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+}

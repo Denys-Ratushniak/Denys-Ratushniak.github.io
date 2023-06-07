@@ -1,0 +1,40 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+.home-container {
+    height: 95vh;
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-section{
+    @include info-section-style;
+}
+
+.welcome{
+    @include info-page-style;
+}
+
+@media screen and (max-width: 576px) {
+    .welcome {
+        font-size: 100%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .welcome {
+        font-size: 100%;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .welcome {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
